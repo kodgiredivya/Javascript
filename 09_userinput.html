@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="test()">click me</button>
+    <input id="tt" type="text">
+    <input id="bb" type="text">
+    <input type="text " id="cc">
+    <input type="text" id="dd">
+    <button onclick="myname()">show my name</button>
+    <button onclick="table()">table of 13</button>
+    <script>
+        function test() {
+            console.log("hello world");
+            var userdata = document.getElementById("tt").value
+            console.log(userdata);
+            for (var j = 1; j <= 10; j++) {
+                console.log(j * userdata);
+            }
+
+            var variable1 = document.getElementById("bb").value
+            var variable2 = document.getElementById("cc").value
+            var variable3 = document.getElementById("dd").value
+            console.log(" before swapping : " + variable1);
+            console.log("before swappping : " + variable2);
+            console.log("before swapping : " + variable3);
+            var c;
+            c = variable1;
+            variable1 = variable2;
+            variable2 = variable3;
+            variable3 = c;
+
+            console.log("after swapping of varialbes: " + variable1);
+            console.log("after swapping of variables : " + variable2);
+            console.log("after swapping of variables : " + variable3);
+
+
+
+        }
+        function myname() {
+            console.log("my name is divya");
+        }
+        function table() {
+            for (var i = 1; i <= 10; i++) {
+                console.log(i * 13);
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

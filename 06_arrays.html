@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var laptop = ["MSI", "gigabyte", "asus", "apple"];
+        var brand1 = "dell";
+        var brand2 = "lenovo";
+        console.log("value of brand1 = " + brand1 + " & value of brand2 = " + brand2 + " thank you");
+        // console.log(laptop[1]);
+        // console.log(laptop[3]);
+        var i = 0;
+        var j = 0;
+        for (i = 0; i < 4; i++) {
+            console.log(laptop[i]);
+        }
+
+        while (j < 4) {
+            console.log("inside while loop " + laptop[j]);
+            j = j + 1;
+        }
+        var number = [1, 2, 3, 4, 5];
+        for (var k = 0; k < 5; k++) {
+            console.log(number[k]);
+
+        }
+        console.clear();
+        var table = 1;
+        while (table <= 10) {
+            console.log(table * 15);
+            table = table + 1;
+        }
+        console.clear();
+        var array = ["MSI", "gigabyte", "asus", "apple", "dell"];
+        console.log("before push : " + array);
+        array.push("TCH");         // value goes at end
+        array.unshift("sony");     // value goes at start
+        console.log("after  unshift : " + array);
+
+        var aa = array.pop();
+        console.log("after pop : " + array);
+        console.log(aa);
+        array.shift();
+        console.log("after shift : " + array);
+        var bb = array.splice(3, 1);    // remove data from desired position 
+        console.log(bb);
+        console.log("after splice " + array);
+        var cc = array.slice(0, 1);
+        console.log("cc " + cc);
+        console.log("after slice " + array);
+        console.clear();
+        var brand1 = ["nokia", " samsung", "apple"];
+        var brand2 = ["dell", "lenovo", "asus"];
+        var dd = brand1.concat(brand2);
+        console.log(brand1);
+        console.log(brand2);
+        console.log(dd);
+        var len = dd.length;
+        console.log(len);
+    </script>
+</body>
+
+</html>

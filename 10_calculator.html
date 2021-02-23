@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card mt-5">
+                    <div class="card-header">Calculator</div>
+                    <div class="card-body">
+                        <div id="output"></div>
+                        <input type="number" class="form-control" id="n1">
+                        <br>
+                        <input type="number" class="form-control" id="n2">
+                        <br>
+                        <div class="btn-group w-100">
+                            <button class="btn btn-danger" onclick="cal('+')">+</button>
+                            <button class="btn btn-success" onclick="cal('-')">-</button>
+                            <button class="btn btn-info" onclick="cal('*')">*</button>
+                            <button class="btn btn-dark" onclick="cal('/')">/</button>
+                            <button class="btn btn-warning" onclick="showall()">result</button>
+
+                        </div>
+                    </div>
+                    <div class="card-footer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // function addnum() {
+        //     var num1 = +document.getElementById("n1").value;
+        //     var num2 = +document.getElementById("n2").value;
+        //     document.getElementById("output").innerHTML += "<div class='alert alert-success'>" + (num1 + num2) + "</div>"
+        // }
+
+        // function subtractnum() {
+        //     var num1 = +document.getElementById("n1").value;
+        //     var num2 = +document.getElementById("n2").value;
+        //     document.getElementById("output").innerHTML += "<div class='alert alert-success'>" + (num1 - num2) + "</div>"
+        // }
+        // function multiplynum() {
+        //     var num1 = +document.getElementById("n1").value;
+        //     var num2 = +document.getElementById("n2").value;
+        //     document.getElementById("output").innerHTML += "<div class='alert alert-success'>" + (num1 * num2) + "</div>"
+        // }
+        // function dividenum() {
+        //     var num1 = +document.getElementById("n1").value;
+        //     var num2 = +document.getElementById("n2").value;
+        //     document.getElementById("output").innerHTML += "<div class='alert alert-success'>" + (num1 / num2) + "</div>"
+        // }
+        // function showall() {
+        //     addnum();
+        //     subtractnum();
+        //     multiplynum();
+        //     dividenum();
+        // }
+        function cal(op) {
+            var num1 = +document.getElementById("n1").value;
+            var num2 = +document.getElementById("n2").value;
+            if (op == "+") {
+                document.getElementById("output").innerHTML += "<div class='alert alert-danger'> Addition = " + (num1 + num2) + "</div>"
+            }
+            else if (op == "-") {
+                document.getElementById("output").innerHTML += "<div class='alert alert-danger'> Subtraction = " + (num1 - num2) + "</div>"
+
+            }
+            else if (op == "*") {
+                document.getElementById("output").innerHTML += "<div class='alert alert-danger'> Multiplication = " + (num1 * num2) + "</div>"
+
+            }
+            else if (op == "/") {
+                document.getElementById("output").innerHTML += "<div class='alert alert-danger'> Division = " + (num1 / num2) + "</div>"
+            }
+            else {
+                console.log("no operation");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
